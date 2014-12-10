@@ -6,7 +6,7 @@ class UserTest < ActiveSupport::TestCase
   # end
   def setup
     @user = User.new(name: "Example User", email: "foobar@example.com",
-                    password: "foobar", password_confirmation: "foobar")
+                    password: "foobar", password_confirmation: "foobar", service: true)
   end
 
   test "Should be valid" do
@@ -61,5 +61,10 @@ class UserTest < ActiveSupport::TestCase
   test "password length should be above minimum" do
     @user.password = @user.password_confirmation = "foo"
     assert_not @user.valid?
+  end
+
+  test "service should be a boolean" do
+    @user.service = false
+    assert_equal @user.service, false
   end
 end
