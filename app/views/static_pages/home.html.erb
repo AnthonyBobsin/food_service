@@ -1,6 +1,9 @@
 <% provide(:title, "Home") %>
 <div class="jumbotron" id="homeimg">
-  <h1 class="homemain">Welcome</h1>
-  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-success", id:"signupbutt" %>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <h1 class="welcome">Welcome</h1>
+      <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-success signupbutt" %>
+    </div>
+  </div>
 </div>
-

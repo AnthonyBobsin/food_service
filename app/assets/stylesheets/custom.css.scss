@@ -1,6 +1,14 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+/* Mixins and variables */
+
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+
 $dark-green: #19A50C;
 $darker-green: #117A07;
 $white-gray: #eee;
@@ -16,17 +24,11 @@ $darker-gray: #333;
 	color: $darker-gray;
 	height: 100vh;
 	width: 100%;
-	margin: 0;
+
 }
 
-#signupbutt {
-	float: right;
-	margin: 2% 45% 0% 0%;
-	background-color: $dark-green;
-	color: $white-gray;
-	&:hover {
-		background-color: $darker-green;
-	}
+#usermid {
+	margin-left: -5%;
 }
 
 /* universal */
@@ -56,7 +58,6 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 3em;
   letter-spacing: 1.1px;
-  margin: 75px 0 0 0;
   text-align: center;
 }
 
@@ -70,9 +71,9 @@ h2 {
 }
 
 p {
-	margin-top: 15px;
+	margin: 35px 20% 0 20%;
   font-size: 1.1em;
-  line-height: 1.7em;
+  line-height: 2.5em;
   letter-spacing: 1.1px;
   text-align: center;
 }
@@ -101,9 +102,18 @@ p {
 
 /* Content */
 .homemain {
-  margin: 15% 0% 0% 0%;
+  padding: 75px 0 0 0;
 
 }
+.vhmod {
+	height: 100vh;
+}
+
+.welcome {
+	width: 100%;
+	margin-top: 30%;
+}
+
 
 /* footer */
 
@@ -130,4 +140,36 @@ footer {
   		margin-left: 15px;
   	}
   }
+}
+
+/* miscellaneous */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
+
+.signupbutt {
+	background-color: $dark-green;
+	color: $white-gray;
+	&:hover {
+		background-color: $darker-green;
+	}
+	width:100%;
+}
+
+/* forms */
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin: 25px 0;
+  @include box_sizing;
+}
+
+input {
+  height: auto !important;
 }
