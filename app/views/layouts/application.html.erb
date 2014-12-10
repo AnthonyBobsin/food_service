@@ -10,6 +10,9 @@
 <body>
 <%= render 'layouts/header' %>
 <div class="vhmod">
+  <% flash.each do |message_type, message| %>
+        <div class="alert alert-<%= message_type %> homemain"><%= message %></div>
+  <% end %>
   <%= yield %>
 </div>
 <%= render 'layouts/footer' %>

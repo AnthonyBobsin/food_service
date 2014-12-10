@@ -103,6 +103,8 @@ p {
 /* Content */
 .homemain {
   padding: 75px 0 0 0;
+  text-align: center;
+  vertical-align: middle;
 
 }
 .vhmod {
@@ -112,6 +114,9 @@ p {
 .welcome {
 	width: 100%;
 	margin-top: 30%;
+}
+.spacer {
+	margin-top: 50px;
 }
 
 
@@ -155,6 +160,7 @@ footer {
 .signupbutt {
 	background-color: $dark-green;
 	color: $white-gray;
+	letter-spacing: 1.05px;
 	&:hover {
 		background-color: $darker-green;
 	}
@@ -172,4 +178,19 @@ input, textarea, select, .uneditable-input {
 
 input {
   height: auto !important;
+}
+
+#error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin: 0 0 30px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .has-error;
+  .form-control {
+    color: $state-danger-text;
+  }
 }
