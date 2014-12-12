@@ -3,7 +3,7 @@
 <h1>Sign up</h1>
 
 <div class="row">
-  <div class="col-md-6 col-md-offset-3">
+  <div class="col-md-6 col-md-offset-3 float-left">
     <%= form_for(@user) do |f| %>
       <%= render 'shared/error_messages' %>
 
@@ -19,7 +19,11 @@
       <%= f.label :password_confirmation, "Confirmation" %>
       <%= f.password_field :password_confirmation, class:"form-control" %>
 
-      <%= f.submit "Create my account", class: "btn btn-success signupbutt" %>
+      <div class="form-inline">
+      <%= f.label :service %>
+      <div style="margin-left:5px;display:inline;"><%= f.check_box :service, class:"form-control" %></div>
+      </div>
+      <%= f.submit "Create My Account", class: "btn btn-success signupbutt" %>
     <% end %>
   </div>
 </div>

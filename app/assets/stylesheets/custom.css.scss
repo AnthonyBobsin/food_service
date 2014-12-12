@@ -159,6 +159,7 @@ footer {
 
 .signupbutt {
 	background-color: $dark-green;
+	margin: 15px 0 0;
 	color: $white-gray;
 	letter-spacing: 1.05px;
 	&:hover {
@@ -170,10 +171,14 @@ footer {
 /* forms */
 
 input, textarea, select, .uneditable-input {
+	display: inline;
   border: 1px solid #bbb;
-  width: 100%;
-  margin: 25px 0;
+  margin:0 0 15px 0;
   @include box_sizing;
+}
+
+.float-left {
+	text-align: left;
 }
 
 input {
