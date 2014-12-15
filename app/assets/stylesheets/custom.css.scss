@@ -9,7 +9,7 @@
   box-sizing:         border-box;
 }
 
-$dark-green: #19A50C;
+$dark-green: #128B07;
 $darker-green: #117A07;
 $white-gray: #eee;
 $dark-gray: #777;
@@ -25,6 +25,10 @@ $darker-gray: #333;
 	height: 100vh;
 	width: 100%;
 
+}
+
+#loginbox {
+	margin: 4px 0px 0px -20px;
 }
 
 #usermid {
@@ -100,6 +104,17 @@ p {
   }
 }
 
+.dropdown-menu {
+	background-color: rgba(1, 1, 1, 0.8);
+	.rightnav {
+		color: $dark-gray;
+		&:hover {
+			background-color: inherit;
+			color: $white-gray;
+		}
+	}
+}
+
 /* Content */
 .homemain {
   padding: 75px 0 0 0;
@@ -162,10 +177,10 @@ footer {
 	margin: 15px 0 0;
 	color: $white-gray;
 	letter-spacing: 1.05px;
+	width: 100%;
 	&:hover {
 		background-color: $darker-green;
 	}
-	width:100%;
 }
 
 /* forms */
@@ -198,4 +213,17 @@ input {
   .form-control {
     color: $state-danger-text;
   }
+}
+
+.checkbox {
+  margin: 0px 0 10px 25px;
+  span {
+    margin-left: 0px;
+    font-weight: normal;
+  }
+}
+
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
 }
