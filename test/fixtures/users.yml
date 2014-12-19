@@ -1,4 +1,20 @@
 example:
   name: Example User
-  email: example@email.com
-  password_digest: <%= User.digest('foobar') %>
+  email: exampleuser@email.ca
+  password_digest: <%= User.digest('password') %>
+  service: true
+  admin: true
+
+archer:
+  name: Archer Sterling
+  email: duchess@email.ca
+  password_digest: <%= User.digest('password') %>
+  service: false
+
+<% 30.times do |n| %>
+user_<%= n %>:
+  name: <%= "User #{n}" %>
+  email: <%= "user-#{n}@email.com" %>
+  password_digest: <%= User.digest('password') %>
+  service: true
+<% end %> 

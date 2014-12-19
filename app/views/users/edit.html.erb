@@ -1,8 +1,12 @@
-<% provide(:title, "Sign Up") %>
+<% provide(:title, "Edit Profile") %>
 <div class="container homemain">
-<h1>Sign up</h1>
+<h1>Edit Profile</h1>
 <div class="row">
   <div class="col-md-6 col-md-offset-3 float-left">
+    <div class="gravator_edit">
+      <%= gravatar_for @user %>
+      <a href="http://gravatar.com/emails" target=_blank>change</a>
+    </div></br>
     <%= form_for(@user) do |f| %>
       <%= render 'shared/error_messages' %>
 
@@ -18,12 +22,12 @@
       <%= f.label :password_confirmation, "Confirmation" %>
       <%= f.password_field :password_confirmation, class:"form-control" %>
 
-      <%= f.label :service, class: "checkbox inline"  do %>
+      <%= f.label :service, class:"checkbox inline" do %>
         <%= f.check_box :service %>
         <span class="checktext">I also would like to sign up as a service.</span>
       <% end %>
-      
-      <%= f.submit "Create My Account", class: "btn btn-success signupbutt" %>
+
+      <%= f.submit "Edit My Account", class:"signupbutt btn btn-success" %>
     <% end %>
   </div>
 </div>
