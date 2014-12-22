@@ -258,3 +258,19 @@ input {
     }
   }
 }
+
+/* Menu */
+
+.itemlist {
+  padding: 35px 0;
+  li {
+    display: inline;
+  }
+  .item {
+    float: left;
+  }
+  .price{
+    float: right;
+  }
+  border-bottom: 1px solid $gray-lighter;
+}
