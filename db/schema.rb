@@ -11,7 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141219020106) do
+ActiveRecord::Schema.define(version: 20141222062853) do
+
+  create_table "menu_items", force: true do |t|
+    t.text     "item"
+    t.text     "price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "menu_id"
+  end
+
+  add_index "menu_items", ["menu_id"], name: "index_menu_items_on_menu_id"
+
+  create_table "menus", force: true do |t|
+    t.text     "description"
+    t.integer  "user_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "menus", ["user_id"], name: "index_menus_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "name"
