@@ -13,6 +13,9 @@
             <ul class="dropdown-menu">
               <li><%= link_to "Profile", current_user, class: "rightnav" %></li>
               <li><%= link_to "Settings", edit_user_path(current_user), class: "rightnav" %></li>
+              <% if current_user.service %>
+                <li><%= link_to "Edit Menu", edit_menu_path(current_user), class: "rightnav" %></li>
+              <% end %>
               <li class="divider"></li>
               <li>
                 <%= link_to "Log out", logout_path, method: "delete", class: "rightnav" %>

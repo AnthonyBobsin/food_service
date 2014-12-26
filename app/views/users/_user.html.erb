@@ -1,4 +1,5 @@
-<% if user.service == true %>
+<!-- If the user is a service display it in the service directory -->
+<% if user.service %>
   <li>
     <%= gravatar_for user, size:50 %>
     <%= link_to user.name, user %>

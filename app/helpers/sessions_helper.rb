@@ -39,6 +39,12 @@ module SessionsHelper
     end
   end
 
+  # Returns the current users menu
+  def current_user_menu
+    user = current_user;
+    @menu = current_user.menu;
+  end
+
   # Returns true if a user is logged in
   def logged_in?
     !current_user.nil?

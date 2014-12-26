@@ -11,7 +11,6 @@ class User < ActiveRecord::Base
               uniqueness: { case_sensitive: false }
   has_secure_password
   validates :password, length: { minimum: 6 }, allow_blank: true
-  validates :service, presence: true
 
   # Returns the hash digest of a given string
   def User.digest(string)
