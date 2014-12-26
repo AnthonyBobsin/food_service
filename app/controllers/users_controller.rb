@@ -12,8 +12,8 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     if @user.menu
       @menu = @user.menu
-      if @menu.menu_item
-        @menu_item = @menu.menu_item.paginate(page: params[:page])
+      if @menu.menu_items
+        @menu_item = @menu.menu_items.paginate(page: params[:page])
       end
     end
   end

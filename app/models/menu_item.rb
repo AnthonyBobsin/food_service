@@ -1,4 +1,5 @@
 class MenuItem < ActiveRecord::Base
+
   belongs_to :menu
 
   VALID_PRICE_REGEX = /\A\d{0,2}.?\d{0,2}\z/

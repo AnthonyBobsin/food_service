@@ -213,7 +213,6 @@ DEPENDENCIES
   bootstrap-sass (= 3.2.0.0)
   bootstrap-will_paginate (= 0.0.10)
   byebug (= 3.4.0)
-  coffee-rails (= 4.1.0)
   faker (= 1.4.2)
   guard-minitest (= 2.3.1)
   jbuilder (= 2.2.3)

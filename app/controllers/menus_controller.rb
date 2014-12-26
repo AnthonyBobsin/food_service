@@ -7,6 +7,7 @@ class MenusController < ApplicationController
     else
       @menu = user.menu
     end
+    @menu_items = @menu.menu_items
   end
 
   def update
@@ -23,6 +24,7 @@ class MenusController < ApplicationController
   private
 
   def menu_params
-    params.require(:menu).permit(:description)
+    params.require(:menu).permit(:id, :description, menu_items_attributes: [:id, :item, :price])
   end
+
 end
