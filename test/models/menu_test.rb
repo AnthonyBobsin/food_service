@@ -17,11 +17,6 @@ class MenuTest < ActiveSupport::TestCase
     assert_not @menu.valid?
   end
 
-  test "description should be present" do
-    @menu.description = "     "
-    assert_not @menu.valid?
-  end
-
   test "description should be 140 characters or less" do
     @menu.description = "a" * 141
     assert_not @menu.valid?

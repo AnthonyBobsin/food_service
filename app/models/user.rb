@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
 
   has_one :menu, dependent: :destroy
+  accepts_nested_attributes_for :menu, allow_destroy: true
 
   attr_accessor :remember_token
 

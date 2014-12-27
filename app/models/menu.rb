@@ -5,5 +5,5 @@ class Menu < ActiveRecord::Base
   accepts_nested_attributes_for :menu_items, allow_destroy: true, reject_if: :all_blank
 
   validates :user_id, presence: true
-  validates :description, presence: true, length: { maximum: 140 }
+  validates :description, length: { maximum: 140 }
 end

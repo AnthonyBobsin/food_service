@@ -15,19 +15,8 @@
 
           <%= i.label :price %>
           <%= i.text_field :price, class:"form-control" %>
-        <% end %>
 
-
-        <% if false %>
-        <%= @menu_items.each do |menu_item| %>
-          <%= form_for(menu_item) do |i| %>
-            <%= i.label :item %>
-            <%= i.text_field :item, class:"form-control" %>
-
-            <%= i.label :price %>
-            <%= i.text_field :price, class:"form-control" %>
-          <% end %>
-        <% end %>
+          
         <% end %>
 
         <%= f.submit "Edit My Menu", class:"signupbutt btn btn-success" %>
