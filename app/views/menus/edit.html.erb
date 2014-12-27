@@ -15,8 +15,16 @@
 
           <%= i.label :price %>
           <%= i.text_field :price, class:"form-control" %>
+        <% end %>
 
-          
+        <% if false %>
+        <%= f.fields_for(:new_item) do |n| %>
+          <%= n.label :item %>
+          <%= n.text_field :item, class:"form-control" %>
+
+          <%= n.label :price %>
+          <%= n.text_field :price, class:"form-control" %>
+        <% end %>
         <% end %>
 
         <%= f.submit "Edit My Menu", class:"signupbutt btn btn-success" %>

@@ -1,2 +1,3 @@
 class MenuItemsController < ApplicationController
+
 end
