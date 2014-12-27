@@ -11,6 +11,9 @@ Database: SQLite3 for development, PostgreSQL for production.
 
 Heroku Address: https://shrouded-hollows-6531.herokuapp.com
 
+Feel free to create an account to test out the creation of menus. Fake users were generated with 
+the Faker gem for depth. When signing up remember to also sign up as a service so you can experiment with creating
+your own menu from the account dropdown.
 
 
 
