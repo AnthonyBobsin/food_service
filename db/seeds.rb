@@ -1,9 +1,8 @@
 user = User.create(name:  "Example User",
-                   email: "example@email.org",
-                   password:              "foobars",
-                   password_confirmation: "foobars",
+                   email: "example@email.com",
+                   password: "examplepass",
                    service: true,
-                   admin: true)
+                   admin: false)
 
 menu = Menu.create(description: "Best pizza place in town",
                     user: user)
