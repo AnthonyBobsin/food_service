@@ -1,3 +1,36 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import './settings/_config';
+
+#homeimg {
+    background-image: url("http://i.imgur.com/3KWUmjp.jpg");
+    height: calc(100vh - 50px);
+    h1 {
+        text-align: center;
+        margin-top: 20vh;
+        font-size: 15vw;
+        @media(min-width: $md-screen) {
+            font-size: 15rem;
+        }
+    }
+    .signupbutt {
+        margin-top: 10vh;
+        padding: 10px 40px;
+        font-size: 5vw;
+        @media(min-width: $md-screen) {
+            font-size: 5rem;
+        }
+        text-align: center;
+        width: 100%;
+        background: $emerald;
+        border: $nephritis;
+
+        background: linear-gradient(to bottom, $emerald, $nephritis);
+        box-shadow: 0 5px 0 $teal;
+        &:hover {
+            background: linear-gradient(to bottom, $nephritis, $teal);
+        }
+    }
+}

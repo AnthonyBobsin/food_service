@@ -10,6 +10,42 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
+ *= require bootstrap-sass-official/assets/stylesheets/_bootstrap.scss
+ *= require settings/_settings.scss
+ *= require_directory .
  *= require_self
  */
+
+@import './settings/_config';
+
+/* Right navbar highlight animation */
+@keyframes borderBottom {
+    0% { width: 0 }
+    100% { width: 100% }
+}
+
+/* Nav Bar */
+
+.navbar {
+    margin-bottom: 0px;
+    .rightnav {
+        height: 46px;
+    }
+    .botBord {
+        height: 4px;
+        background-color: inherit;
+    }
+    .botBordAnimation {
+        background-color: $emerald;
+        animation: borderBottom 200ms linear;
+    }
+    .navbar-brand {
+        color: $nephritis;
+        font-family: 'Roboto', sans-serif;
+        &:hover {
+            color: $teal;
+        }
+    }
+}
+
+
