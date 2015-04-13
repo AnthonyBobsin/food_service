@@ -1,13 +1,13 @@
 <% provide(:title, "All Services") %>
-<div class="homemain container">
-<h1>All Services</h1>
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <%= will_paginate %>
-    <ul class="users">
-      <%= render @users %>
-    </ul>
-    <%= will_paginate %>
-  </div>
-</div>
+<div class="userIndex container-fluid">
+    <h1>All Services</h1>
+    <div class="row">
+      <div class="col-xs-12 col-xs-offset-0 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+        <%= will_paginate %>
+        <ul class="users">
+          <%= render @users %>
+        </ul>
+        <%= will_paginate %>
+      </div>
+    </div>
 </div>
