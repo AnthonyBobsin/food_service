@@ -4,6 +4,8 @@
 
 @import './settings/_config.scss';
 
+/* Service index page */
+
 .userIndex {
     text-align: center;
     .users {
@@ -48,4 +50,27 @@
     background-color: $emerald;
     border-color: $emerald;
     cursor: default;
+}
+
+/* User show page */
+
+.homemain {
+    #usermid {
+        text-align: center;
+        img {
+            border-radius: 100%;
+        }
+    }
+    .itemlist {
+        list-style: none;
+        border-bottom: 1px solid $silver;
+        padding: 20px 0;
+        margin: 0;
+        .item {
+            float: left
+        }
+        .price {
+            float: right;
+        }
+    }
 }
