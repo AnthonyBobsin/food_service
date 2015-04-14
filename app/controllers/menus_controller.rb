@@ -24,7 +24,6 @@ class MenusController < ApplicationController
     end
     @menu_items = @menu.menu_items
     @new_item = @menu.menu_items.build
-
   end
 
   # Get called after submit button is pressed on edit menu form
@@ -32,9 +31,14 @@ class MenusController < ApplicationController
     user = User.find(params[:id])
     @menu = user.menu
     if @menu
-      if @menu.update_attributes(menu_params)
-        flash[:success] = "Menu Updated"
-        redirect_to user
+    if @menu.update_attributes(menu_params)
+        if params[:commit] == "Add Another Entry"
+            flash[:success] = "Entry added"
+             redirect_to edit_menu_url
+        else
+            flash[:success] = "Menu Updated"
+            redirect_to user
+        end
       else
         render 'edit'
       end

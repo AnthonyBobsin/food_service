@@ -11,7 +11,7 @@
       <% if @user.service %>
           <% if @menu %>
               <%= render @menu %>
-          <% else %>
+          <% elsif current_user == @user %>
               <p>You haven't created a menu yet. <%= link_to "Click here", 
                   edit_menu_path %> to create your menu.</p>
           <% end %>

@@ -55,7 +55,7 @@
 /* User show page */
 
 .homemain {
-    #usermid {
+    h1 {
         text-align: center;
         img {
             border-radius: 100%;
@@ -72,5 +72,52 @@
         .price {
             float: right;
         }
+    }
+}
+
+/* User edit page */
+
+.editUser {
+    .gravator_edit {
+        img {
+            border-radius: 100%;
+            float: left;
+        }
+        .userName {
+            float: right;
+        }
+    }
+    label {
+        margin-top: 15px;
+    }
+    .signupbutt {
+        margin-top: 30px;
+    }
+    .inline {
+        p { 
+            display: inline;
+        }
+        input {
+            position: static;
+            margin-left: 0px;
+        }
+    }
+
+}
+
+/* User sign up page */
+
+.signUp {
+    label { 
+        margin-top: 15px;
+    }
+    .inline {
+        input {
+            position: static;
+            margin-left: 0px;
+        }
+    }
+    .signupbutt {
+        margin-top: 15px;
     }
 }

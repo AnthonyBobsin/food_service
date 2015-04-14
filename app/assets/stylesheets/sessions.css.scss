@@ -1,3 +1,20 @@
 // Place all the styles related to the Sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* User login page */
+
+.loginPage {
+    label {
+        margin-top: 15px;
+    }
+    .inline {
+        input {
+            position: static;
+            margin-left: 0;
+        }
+    }
+    .signupbutt {
+        margin: 15px 0;
+    }
+}

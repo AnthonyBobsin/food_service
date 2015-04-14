@@ -18,20 +18,32 @@
 
     .signupbutt {
         margin-top: 10vh;
-        padding: 10px 40px;
         font-size: 5vw;
         @media(min-width: $md-screen) {
             font-size: 5rem;
         }
-        text-align: center;
-        width: 100%;
-        background: $emerald;
-        border: $nephritis;
-
-        background: linear-gradient(to bottom, $emerald, $nephritis);
-        box-shadow: 0 5px 0 $teal;
-        &:hover {
-            background: linear-gradient(to bottom, $nephritis, $teal);
-        }
     }
 }
+
+.signupbutt {
+    padding: 10px 40px;
+    text-align: center;
+    width: 100%;
+    background: $emerald;
+    border: $nephritis;
+
+    background: linear-gradient(to bottom, $emerald, $nephritis);
+    box-shadow: 0 5px 0 $teal;
+    &:hover {
+        background: linear-gradient(to bottom, $nephritis, $teal);
+    }
+}
+
+/* Help page */
+
+.staticHelp {
+    p {
+        font-size: 25px;
+    }
+}
+

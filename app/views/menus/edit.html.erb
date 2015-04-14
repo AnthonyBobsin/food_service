@@ -2,32 +2,44 @@
 <div class="container homemain">
   <h1>Edit Menu</h1>
   <div class="row">
-    <div class="col-md-6 col-md-offset-3 float-left">
+      <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 
+          col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 editMenu">
       <%= form_for(@menu) do |f| %>
 
         <%= f.label :description %>
-        <%= f.text_field :description, class:"form-control" %>
-
+        <%= f.text_area :description, class:"form-control" %>
         
-        <%= f.fields_for(:menu_items) do |i| %>
-          <%= i.label :item %>
-          <%= i.text_field :item, class:"form-control" %>
-
-          <%= i.label :price %>
-          <%= i.text_field :price, class:"form-control" %>
-        <% end %>
-
         <% if false %>
-        <%= f.fields_for(:new_item) do |n| %>
-          <%= n.label :item %>
-          <%= n.text_field :item, class:"form-control" %>
+        <div class="menuItem">
+            <%= f.fields_for(:menu_items) do |i| %>
+              <%= i.label :item %>
+              <%= i.text_field :item, class:"form-control" %>
 
-          <%= n.label :price %>
-          <%= n.text_field :price, class:"form-control" %>
-        <% end %>
+              <%= i.label :price %>
+              <%= i.text_field :price, class:"form-control" %>
+            <% end %>
+        </div>
         <% end %>
 
-        <%= f.submit "Edit My Menu", class:"signupbutt btn btn-success" %>
+        <table class="menuItems">
+            <tr>
+                <th class="item">Item Title</th>
+                <th class="price">Price</th>
+            </tr>
+            <%= f.fields_for(:menu_items, html: { class: "itemSlot" })  do | i | %>
+                <tr>
+                    <td class="item">
+                        <%= i.text_field :item, class: "form-control" %>
+                    </td>
+                    <td class="price">
+                        <%= i.text_field :price, class: "form-control" %>
+                    </td>
+                </tr>
+            <% end %>
+        </table>
+        <%= f.submit "Add Another Entry", class: "signupbutt btn btn-success" %>
+           
+        <%= f.submit "Edit My Menu", class: "signupbutt btn btn-success" %>
       <% end %>
     </div>
   </div>
