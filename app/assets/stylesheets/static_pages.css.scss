@@ -26,16 +26,19 @@
 }
 
 .signupbutt {
+    border-radius: 0px;
     padding: 10px 40px;
     text-align: center;
     width: 100%;
     background: $emerald;
     border: $nephritis;
 
-    background: linear-gradient(to bottom, $emerald, $nephritis);
-    box-shadow: 0 5px 0 $teal;
+    background: linear-gradient($emerald 50%, $dark-emerald 50%);
+    box-shadow: 0 2px 5px $midnightBlue;
+    transition: box-shadow 1s;
     &:hover {
-        background: linear-gradient(to bottom, $nephritis, $teal);
+        background: linear-gradient($lighter-emerald 50%, $light-emerald 50%);
+        box-shadow: 0 7px 25px $midnightBlue;
     }
 }
 
