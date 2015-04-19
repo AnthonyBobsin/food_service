@@ -18,12 +18,6 @@
 
 @import './settings/_config';
 
-/* Right navbar highlight animation */
-@keyframes borderBottom {
-    0% { width: 0 }
-    100% { width: 100% }
-}
-
 /* Nav Bar */
 
 .navbar {
@@ -33,11 +27,12 @@
     }
     .botBord {
         height: 4px;
-        background-color: inherit;
+        width: 0;
+        background-color: $emerald;
+        transition: width 250ms;
     }
     .botBordAnimation {
-        background-color: $emerald;
-        animation: borderBottom 200ms linear;
+        width: 100%;
     }
     .navbar-brand {
         color: $nephritis;
